@@ -96,6 +96,8 @@ def map_choice(data):
             restaurant2 = city_data[city_data.name == restaurants[1]]
             restaurant3 = city_data[city_data.name == restaurants[2]]
             map_make_3(set_view_lat, set_view_long, restaurants, restaurant1, restaurant2, restaurant3)
+        for i in range(len(restaurants)):
+            st.sidebar.write(colors[i], ": ", restaurants[i])
 
 def map_make_2(set_view_lat, set_view_long, restaurants, restaurant1, restaurant2):
     layer1 = pdk.Layer(
