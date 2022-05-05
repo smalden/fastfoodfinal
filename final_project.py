@@ -73,6 +73,8 @@ mcDonalds = {
 def load_data(file_name):
     data = pd.read_csv(file_name)
     data.replace({'name': mcDonalds}, inplace=True)
+    data.replace('Chick-Fil-A', 'Chick-fil-A', inplace=True)
+    data.replace('Dunkin\' Donuts', 'Dunkin Donuts', inplace=True)
     return data
 
 def map_choice(data):
