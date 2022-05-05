@@ -216,7 +216,7 @@ def most_states_with(data):
         state_name = us_states[value]
         return_states.append(state_name)
     ax.bar(return_states, top_five_states.values.tolist())
-    ax.set_title("Top 5 States With The Most" + name)
+    ax.set_title("Top 5 States With The Most " + name)
     ax.set_xlabel("State")
     ax.set_ylabel("Number of " + name + " Locations")
     st.pyplot(fig)
