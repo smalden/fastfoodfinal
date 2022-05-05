@@ -83,6 +83,7 @@ def map_choice(data):
     set_view_long = city_data['longitude'].mean()
     names = city_data.groupby('name')['name'].count().sort_values(ascending=False)
     restaurants = st.sidebar.multiselect("Select up to 3 restaurants to display", names.keys())
+    colors = ["Red", "Green", "Blue"]
     if st.sidebar.button("Generate Map") and len(restaurants)>=1 and len(restaurants)<=3:
         if len(restaurants) == 1:
             restaurant1 = city_data[city_data.name == restaurants[0]]
