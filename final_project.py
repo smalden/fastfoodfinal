@@ -222,7 +222,7 @@ def most_states_with(data):
 
 
 def main():
-    data = load_data("C:\\fastfooddata.csv")
+    data = load_data("fastfooddata.csv")
     choice = st.sidebar.selectbox("Choose a graph or map", ["Cities With the Most Fast Food Restaurants", "Most Popular Restaurants by State", "Top 5 States With The Most of any Restaurant", "Map of All Restaurants by City"])
     if choice == "Cities With the Most Fast Food Restaurants":
         top_five_cities(data)
