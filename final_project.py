@@ -71,7 +71,7 @@ mcDonalds = {
 }
 @st.cache(allow_output_mutation=True)
 def load_data(file_name):
-    data = pd.read_csv('C:\\fastfooddata.csv')
+    data = pd.read_csv(fie_name)
     data.replace({'name': mcDonalds}, inplace=True)
     return data
 
